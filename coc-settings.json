@@ -1,0 +1,31 @@
+{
+  "codeLens.enable": true,
+  "javascript.suggestionActions.enabled": false,
+  "javascript.referencesCodeLens.enable": false,
+  "typescript.referencesCodeLens.enable": false,
+  "typescript.implementationsCodeLens.enable": false,
+  "suggest.triggerAfterInsertEnter": true,
+  "diagnostic.errorSign": "✘",
+  "diagnostic.warningSign": "⚠",
+  "diagnostic.virtualTextCurrentLineOnly": false,
+  "workspace.workspaceFolderCheckCwd": true,
+  "suggest.noselect": false,
+  "suggest.labelMaxLength": 70,
+  "coc.preferences.formatOnSaveFiletypes": [],
+  "workspace.bottomUpFiletypes": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "eslint.probe": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue"
+  ],
+  "snippets.textmateSnippetsRoots": ["~/.config/coc.snippets"],
+  "languageserver": {},
+  "codeLens.enable": true
+}
