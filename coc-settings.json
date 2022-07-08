@@ -26,6 +26,5 @@
     "vue"
   ],
   "snippets.textmateSnippetsRoots": ["~/.config/coc.snippets"],
-  "languageserver": {},
-  "codeLens.enable": true
+  "languageserver": {}
 }

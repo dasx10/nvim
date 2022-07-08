@@ -3,23 +3,28 @@ set encoding=UTF-8
 set number
 set cursorline
 :highlight Cursorline cterm=bold ctermbg=black
+set ruler
+set guifont=Fira\ Code:h12
 set smarttab
 set cindent
 set hidden " Some servers have issues with backup files, see #649 set nobackup set nowritebackup " Better display for messages set cmdheight=2 " You will have bad experience for diagnostic messages when it's default 4000.
 set expandtab
 set showmatch
+set autoindent
+set filetype
+set background      =dark
 set pumblend        =25
 set winblend        =25
-set tabstop         =2
-set softtabstop     =2
 set shiftwidth      =2
-set updatetime      =300
+set softtabstop     =2
+set tabstop         =2
+set clipboard       =unnamedplus
+set inccommand      =split
+set list listchars  =tab:→\ ,eol:↲,nbsp:␣,trail:·,space:·,extends:⟩,precedes:⟨
 set shortmess      +=c
 set signcolumn      =yes
-set clipboard       =unnamed
-set list listchars  =tab:→\ ,eol:↲,nbsp:␣,trail:·,space:·,extends:⟩,precedes:⟨
+set updatetime      =300
 set wildignore      =*/node_modules/*,*/dist/*
-set inccommand      =split
 set termguicolors
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 if !has('gui_running')
