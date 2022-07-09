@@ -46,6 +46,8 @@ nmap <leader>! :e!<CR>
 nmap <leader>ghp <Plug>(GitGutterPreviewHunk)
 nmap <leader>ghs <Plug>(GitGutterStageHunk)
 nmap <leader>ghu <Plug>(GitGutterUndoHunk)
+nmap <leader>i :call ShowDocumentation()<CR>
+xmap <leader>i :call ShowDocumentation()<CR>
 
 " Create mappings for function text object, requires document symbols feature of languageserver.
 xmap if <Plug>(coc-funcobj-i)

@@ -37,3 +37,9 @@ let g:bettercomments_language_aliases = { 'javascript': 'js', 'typescript': 'ts'
 let g:airline_section_a = airline#section#create(['mode', 'branch'])
 let g:NERDTreeGitStatusWithFlags = 1
 
+" Use <C-j> for jump to next placeholder, it's default of coc.nvim
+let g:coc_snippet_next = '<C-j>'
+" Use <C-k> for jump to previous placeholder, it's default of coc.nvim
+let g:coc_snippet_prev = '<C-k>'
+" Use <leader>x for convert visual selected code to snippet
+xmap <leader>x  <Plug>(coc-convert-snippet)
