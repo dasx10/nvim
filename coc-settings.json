@@ -26,5 +26,12 @@
     "vue"
   ],
   "snippets.textmateSnippetsRoots": ["~/.config/coc.snippets"],
-  "languageserver": {}
+  "languageserver": {},
+  "emmet.includeLanguages": {
+    "vue-html": "html",
+    "hbs": "html"
+  },
+  "emmet.optimizeStylesheetParsing": true,
+  "emmet.extensionsPath": "~/.config/nvim/",
+  "snippets.userSnippetsDirectory": "~/.config/nvim/snippets"
 }

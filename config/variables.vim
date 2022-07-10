@@ -10,6 +10,19 @@ let g:coc_global_extensions = [
 \ 'coc-eslint',
 \ 'coc-prettier',
 \ 'coc-json',
+\ 'coc-tabnine',
+\ 'coc-xml',
+\ 'coc-svg',
+\ 'coc-spell-checker',
+\ 'coc-css',
+\ 'coc-cssmodules',
+\ 'coc-stylelintplus',
+\ 'coc-html',
+\ 'coc-htmlhint',
+\ 'coc-vimlsp',
+\ 'coc-emmet',
+\ 'coc-webpack',
+\ '@yaegassy/coc-volar',
 \ ]
 
 
