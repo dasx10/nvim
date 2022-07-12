@@ -12,6 +12,8 @@ set expandtab
 set showmatch
 set autoindent
 set filetype
+set linebreak
+set colorcolumn     =80
 set background      =dark
 set pumblend        =25
 set winblend        =25
@@ -49,3 +51,11 @@ set statusline+=%2*\%L
 set statusline+=%7*\::
 set statusline+=%2*\%c
 set statusline+=%3*\ \%*
+
+
+set wildmenu
+set wcm=<F12>
+menu Exit.quit     :quit<CR>
+menu Exit.quit!    :quit!<CR>
+menu Exit.save     :exit<CR>
+map <F10> :emenu Exit.<Tab>

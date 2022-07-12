@@ -1,0 +1,44 @@
+snippet ed "export default" b
+export default $1;$0
+endsnippet
+snippet \declare curry\ "declare curry"
+type ConsistentTuple <Tuple extends readonly unknown[]> = Tuple extends readonly [...infer Start, unknown]
+    ? [] | ConsistentTuple<Start> | Start | Tuple
+    : Tuple;
+
+type TupleDifferenceStart <
+    X extends readonly unknown[],
+    Y extends readonly unknown[],
+> = Y['length'] extends 0
+    ? X
+    : Y['length'] extends X['length']
+    ? X
+    : X extends readonly [unknown, ...infer Next]
+        ? Y['length'] extends Next['length']
+            ? Next
+            : TupleDifferenceStart<Next, Y>
+        : X;
+
+type CurryResult <
+    X extends readonly [unknown, unknown, ...unknown[]],
+    Y extends ConsistentTuple<X>,
+    Result
+> = Y extends readonly []
+  ? <Z extends ConsistentTuple<X>>(...z: Z) => CurryResult<X, Z, Result>
+  : Y['length'] extends X['length']
+    ? Result
+    // @ts-ignore
+    : <Z extends ConsistentTuple<TupleDifferenceStart<X, Y>>>(...z: Z) => CurryResult<X, [...Y, ...Z], Result>;
+
+
+declare const curry: <
+    Parameters extends readonly [unknown, unknown, ...unknown[]] = readonly[unknown, unknown],
+    Result = unknown,
+    ConsistentParameters extends ConsistentTuple<Parameters> = ConsistentTuple<Parameters>,
+>(
+    executor                : (...parameters: Parameters) => Result,
+    ...consistentParameters : ConsistentParameters
+) => CurryResult<Parameters, ConsistentParameters, Result>;
+
+export default curry;
+endsnippet

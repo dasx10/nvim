@@ -20,10 +20,10 @@ Plug 'AndrewRadev/tagalong.vim'
 Plug 'lilydjwg/colorizer'
 
 " themes
-" Plug 'morhetz/gruvbox'
+Plug 'morhetz/gruvbox'
 " Plug 'wojciechkepka/vim-github-dark'
 " Plug 'wuelnerdotexe/vim-enfocado'
-Plug 'tomasiser/vim-code-dark'
+" Plug 'tomasiser/vim-code-dark'
 
 " update syntax
 Plug 'jbgutierrez/vim-better-comments'

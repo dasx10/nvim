@@ -73,7 +73,7 @@
         "bdcbl"  : "border-block-color:|;",
         "bdcbls" : "border-block-start-color:|;",
         "bdcble" : "border-block-end-color:|;",
-        "stylebutton": "cursor: pointer;\ndisplay: ${1:inline-block};\nbackground-color: ${2:transparent};\ncolor: ${3:inherit};\nvertical-align: ${4:middle};"
+        "sbtn": "cursor: pointer;\ndisplay: ${1:inline-block};\nbackground-color: ${2:transparent};\ncolor: ${3:inherit};\nvertical-align: ${4:middle};"
       }
     }
 }

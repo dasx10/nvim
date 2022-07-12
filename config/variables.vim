@@ -27,6 +27,11 @@ let g:coc_global_extensions = [
 
 
 let g:ctrlp__command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+let g:ctrlp_custom_ignore = {
+            \ 'dir': '\v[\/](\.git|\.hg|\.svn)$',
+            \ 'file': '\.swp$\|\.pyo$',
+            \ }
+
 let g:NERDTreeIgnore = ['^node_modules$', '^yarn.lock$', '^package.lock$']
 "let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 "let g:NERDTreeGitStatusNodeColorization = 1
