@@ -26,7 +26,11 @@ Plug 'morhetz/gruvbox'
 " Plug 'tomasiser/vim-code-dark'
 
 " update syntax
+Plug 'luochen1990/rainbow'          "Highlight bracket
+Plug 'sheerun/vim-polyglot'
+Plug 'hail2u/vim-css3-syntax'
 Plug 'jbgutierrez/vim-better-comments'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
 Plug 'posva/vim-vue'
 

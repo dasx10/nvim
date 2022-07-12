@@ -46,7 +46,7 @@ let g:NERDTreeIgnore = ['^node_modules$', '^yarn.lock$', '^package.lock$']
   "\ "Ignored"   : "#808080"
   "\ }
 
-
+let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 
 " vim-prettier
 "let g:prettier#quickfix_enabled = 0

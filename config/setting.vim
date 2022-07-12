@@ -1,6 +1,7 @@
 set mouse=a
 set encoding=UTF-8
 set number
+set relativenumber
 set cursorline
 :highlight Cursorline cterm=bold ctermbg=black
 set ruler
