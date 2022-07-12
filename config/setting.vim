@@ -53,7 +53,6 @@ set statusline+=%7*\::
 set statusline+=%2*\%c
 set statusline+=%3*\ \%*
 
-
 set wildmenu
 set wcm=<F12>
 menu Exit.quit     :quit<CR>

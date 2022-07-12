@@ -28,23 +28,23 @@ let g:coc_global_extensions = [
 
 let g:ctrlp__command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 let g:ctrlp_custom_ignore = {
-            \ 'dir': '\v[\/](\.git|\.hg|\.svn)$',
+            \ 'dir': '\v[\/](\.git|\.hg|\.svn|\.vscode|\.idea)$',
             \ 'file': '\.swp$\|\.pyo$',
             \ }
 
-let g:NERDTreeIgnore = ['^node_modules$', '^yarn.lock$', '^package.lock$']
-"let g:WebDevIconsUnicodeDecorateFolderNodes = 1
-"let g:NERDTreeGitStatusNodeColorization = 1
-"let g:NERDTreeColorMapCustom = {
-  "\ "Staged"    : "#0ee375",
-  "\ "Modified"  : "#d9bf91",
-  "\ "Renamed"   : "#51C9FC",
-  "\ "Untracked" : "#FCE77C",
-  "\ "Unmerged"  : "#FC51E6",
-  "\ "Dirty"     : "#FFBD61",
-  "\ "Clean"     : "#87939A",
-  "\ "Ignored"   : "#808080"
-  "\ }
+" let g:NERDTreeIgnore = ['^node_modules$', '\.idea$', '\.vscode$', '\.history$', '^yarn.lock$', '^package.lock$']
+" let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+" let g:NERDTreeGitStatusNodeColorization = 1
+" let g:NERDTreeColorMapCustom = {
+"   \ "Staged"    : "#0ee375",
+"   \ "Modified"  : "#d9bf91",
+"   \ "Renamed"   : "#51C9FC",
+"   \ "Untracked" : "#FCE77C",
+"   \ "Unmerged"  : "#FC51E6",
+"   \ "Dirty"     : "#FFBD61",
+"   \ "Clean"     : "#87939A",
+"   \ "Ignored"   : "#808080"
+"   \ }
 
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 
