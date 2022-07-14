@@ -12,75 +12,88 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
-" Remap keys for gotos
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-nmap <silent> ga <Plug>(EasyAlign)
-xmap <silent> ga <Plug>(EasyAlign)
-nmap <silent> gl :CocCommand eslint.executeAutofix<CR>
-xmap <silent> gl :CocCommand eslint.executeAutofix<CR>
-nmap <silent> gb :Git branch<CR>
-xmap <silent> gs :sort<CR>
-nmap <silent> g<space> :StripWhitespace<CR>
-xmap <silent> g<space> :StripWhitespace<CR>
-nmap <silent> gc <viw>:%s/
-vnoremap <silent> gc "hy:%s/<C-r>h//gc<left><left><left>
-" Use K to show documentation in preview window
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-" Highlight symbol under cursor on CursorHold
-" Remap for rename current word
 nmap <F2> <Plug>(coc-rename)
-
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
-xmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>ac <Plug>(coc-codeaction)
-nmap <leader>qf <Plug>(coc-fix-current)
-nmap <leader>fp :let @+ = expand("%")<CR>:echo "Copy directory ".expand("%")<CR>
-nmap <leader>/ :noh<CR>
-nmap <leader>! :e!<CR>
-nmap <leader>ghp <Plug>(GitGutterPreviewHunk)
-nmap <leader>ghs <Plug>(GitGutterStageHunk)
-nmap <leader>ghu <Plug>(GitGutterUndoHunk)
-nmap <leader>i :call ShowDocumentation()<CR>
-xmap <leader>i :call ShowDocumentation()<CR>
-nmap <leader>x :!nvim $PWD<CR>
-nmap <leader>co :copen<CR>
-nmap <leader>n  :call NumberToggle()<CR>
 " Create mappings for function text object, requires document symbols feature of languageserver.
 xmap if <Plug>(coc-funcobj-i)
 omap if <Plug>(coc-funcobj-i)
 xmap af <Plug>(coc-funcobj-a)
 omap af <Plug>(coc-funcobj-a)
-" Add status line support, for integration with other plugin, checkout `:h coc-status`
-" Using CocList
-nnoremap <silent> <space>a :<C-u>CocList diagnostics<cr>
-nnoremap <silent> <space>e :<C-u>CocList extensions<cr>
-nnoremap <silent> <space>c :<C-u>CocList commands<cr>
-nnoremap <silent> <space>o :<C-u>CocList outline<cr>
-nnoremap <silent> <space>s :<C-u>CocList -I symbols<cr>
-nnoremap <silent> <space>j :<C-u>CocNext<CR>
-nnoremap <silent> <space>k :<C-u>CocPrev<CR>
-nnoremap <silent> <space>p :<C-u>CocListResume<CR>
 
+" mouse map
 map <C-LeftMouse>    <Plug>(VM-Mouse-Cursor)
 map <C-RightMouse>   <Plug>(VM-Mouse-Word)
 map <M-C-RightMouse> <Plug>(VM-Mouse-Column)
 
-xmap <C-_> : Commentary<CR>
-nmap <C-_> : Commentary<CR>
-map <C-X>  : q!<CR>
-map <C-x>  : q<CR>
-map <C-s>  : w<CR>
+" LEADER MAP
+" CoC
+xmap <leader>cf  <Plug>(coc-format-selected)
+nmap <leader>cf  <Plug>(coc-format-selected)
+xmap <leader>cas <Plug>(coc-codeaction-selected)
+nmap <leader>cas <Plug>(coc-codeaction-selected)
+nmap <leader>ca  <Plug>(coc-codeaction)
+nmap <leader>cx  <Plug>(coc-fix-current)
+nnoremap <silent><leader>cd :<C-u>CocList diagnostics<cr>
+nnoremap <silent><leader>ce :<C-u>CocList extensions<cr>
+nnoremap <silent><leader>cc :<C-u>CocList commands<cr>
+nnoremap <silent><leader>co :<C-u>CocList outline<cr>
+nnoremap <silent><leader>cs :<C-u>CocList -I symbols<cr>
+nnoremap <silent><leader>cn :<C-u>CocNext<CR>
+nnoremap <silent><leader>cN :<C-u>CocPrev<CR>
+nnoremap <silent><leader>cr :<C-u>CocListResume<CR>
+" Other
+nmap <leader>tp :let @+ = expand("%")<CR>:echo "Copy directory ".expand("%")<CR>
+nmap <leader>i :call ShowDocumentation()<CR>
+xmap <leader>i :call ShowDocumentation()<CR>
+nmap <leader>n :call NumberToggle()<CR>
+" Git
+nmap <leader>ghp <Plug>(GitGutterPreviewHunk)
+nmap <leader>ghs <Plug>(GitGutterStageHunk)
+nmap <leader>ghu <Plug>(GitGutterUndoHunk)
+nmap <leader>G   :G<CR>
+nmap <leader>gA  :Git add -A<CR>
+nmap <leader>ga  :Git add<space>
+nmap <leader>gc  :Git commit<space>
+nmap <leader>gf  :Git fetch<CR>
+nmap <leader>gP  :Git pull<space>
+nmap <leader>gp  :Git push<space>
+nmap <leader>gm  :Git commit -m<space>
+nmap <leader>gb  :Git branch<space>
+nmap <leader>gc  :Git checkout<space>
+nmap <leader>gn  :Git checkout -b<space>
+" Searching
+nmap <leader>od <Plug>(coc-definition)
+nmap <leader>ot <Plug>(coc-type-definition)
+nmap <leader>oi <Plug>(coc-implementation)
+nmap <leader>or <Plug>(coc-references)
+nmap <leader>/ :noh<CR>
+nmap <leader>? :Ack //<left>
+nmap <leader>co :copen<CR>
+" Formating
+vnoremap cg "hy:%s/<C-r>h//cg<left><left><left>
+nmap <leader>fa <Plug>(EasyAlign)
+xmap <leader>fa <Plug>(EasyAlign)
+xmap <leader>fs :sort<CR>
+nmap <leader>fw :StripWhitespace<CR>
+xmap <leader>fw :StripWhitespace<CR>
+nmap <leader>fl :CocCommand eslint.executeAutofix<CR>
+xmap <leader>fl :CocCommand eslint.executeAutofix<CR>
+nmap <leader>fp :CocCommand prettier.formatFile<CR>
+xmap <leader>fp :CocCommand prettier.formatFile<CR>
+
+" CTRL MAP
+xmap <C-_> :Commentary<CR>
+nmap <C-_> :Commentary<CR>
+map <C-X>  :q!<CR>
+map <C-x>  :q<CR>
+map <C-s>  :w<CR>
 map <C-t>  :tabnew<CR>
 map <C-]>  :tabn<CR>
 map <c-[>  :tabp<cr>
 map <Home> :1<CR>
 map <C-a> 1<v>
+map <C-c> :yank<CR>
+
+" ALT MAP
 nmap <silent> <A-d> <Plug>(coc-range-select)
 xmap <silent> <A-d> <Plug>(coc-range-select)
 nmap <A-up>   : delete<CR>2<up>:put<CR>

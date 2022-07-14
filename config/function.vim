@@ -1,3 +1,10 @@
+function! ToggleCMenu()
+    command copen
+    " if (empty(filter(getwininfo(), 'v:val.quickfix')))
+    " endif
+        " :cclose<CR>
+endfunction
+
 function! NumberToggle()
     if (&relativenumber == 1)
         set norelativenumber

@@ -7,4 +7,5 @@ source ~/.config/nvim/config/command.vim
 source ~/.config/nvim/config/autocmd.vim
 
 " colorscheme codedark
-colorscheme gruvbox
+" colorscheme gruvbox
+colorscheme tender

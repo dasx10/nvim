@@ -22,7 +22,7 @@ let g:coc_global_extensions = [
 \ 'coc-vimlsp',
 \ 'coc-emmet',
 \ 'coc-webpack',
-\ '@yaegassy/coc-volar',
+\ 'coc-vetur',
 \ ]
 
 
@@ -32,7 +32,7 @@ let g:ctrlp_custom_ignore = {
             \ 'file': '\.swp$\|\.pyo$',
             \ }
 
-" let g:NERDTreeIgnore = ['^node_modules$', '\.idea$', '\.vscode$', '\.history$', '^yarn.lock$', '^package.lock$']
+let g:NERDTreeIgnore = ['^node_modules$', '\.idea$', '\.vscode$', '\.history$', '^yarn.lock$', '^package.lock$']
 " let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 " let g:NERDTreeGitStatusNodeColorization = 1
 " let g:NERDTreeColorMapCustom = {

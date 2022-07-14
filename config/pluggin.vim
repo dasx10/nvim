@@ -10,6 +10,7 @@ Plug 'ctrlpvim/ctrlp.vim' " fuzzy find files
 Plug 'junegunn/vim-easy-align'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'tpope/vim-fugitive'
+Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-commentary'
 "Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'christoomey/vim-tmux-navigator'
@@ -20,7 +21,8 @@ Plug 'AndrewRadev/tagalong.vim'
 Plug 'lilydjwg/colorizer'
 
 " themes
-Plug 'morhetz/gruvbox'
+" Plug 'morhetz/gruvbox'
+Plug 'jacoborus/tender.vim'
 " Plug 'wojciechkepka/vim-github-dark'
 " Plug 'wuelnerdotexe/vim-enfocado'
 " Plug 'tomasiser/vim-code-dark'
@@ -31,10 +33,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'jbgutierrez/vim-better-comments'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
-Plug 'posva/vim-vue'
 
 Plug 'editorconfig/editorconfig-vim'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
-Plug 'mattn/emmet-vim'
 call plug#end()
