@@ -56,7 +56,7 @@ nmap <leader>gc  :Git commit<space>
 nmap <leader>gf  :Git fetch<CR>
 nmap <leader>gP  :Git pull<space>
 nmap <leader>gp  :Git push<space>
-nmap <leader>gm  :Git commit -m<space>
+nmap <leader>gm  :Git commit -m ""<left>
 nmap <leader>gb  :Git branch<space>
 nmap <leader>gc  :Git checkout<space>
 nmap <leader>gn  :Git checkout -b<space>
