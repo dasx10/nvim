@@ -66,7 +66,7 @@ nmap <leader>ot <Plug>(coc-type-definition)
 nmap <leader>oi <Plug>(coc-implementation)
 nmap <leader>or <Plug>(coc-references)
 nmap <leader>/ :noh<CR>
-nmap <leader>? :Ack //<left>
+nmap <leader>? :Ack<space>
 nmap <leader>co :copen<CR>
 " Formating
 vnoremap cg "hy:%s/<C-r>h//cg<left><left><left>
@@ -79,6 +79,7 @@ nmap <leader>fl :CocCommand eslint.executeAutofix<CR>
 xmap <leader>fl :CocCommand eslint.executeAutofix<CR>
 nmap <leader>fp :CocCommand prettier.formatFile<CR>
 xmap <leader>fp :CocCommand prettier.formatFile<CR>
+xmap <leader>fe :!node ~/.config/nvim/scripts/ru2en.js<CR>
 
 " CTRL MAP
 xmap <C-_> :Commentary<CR>
