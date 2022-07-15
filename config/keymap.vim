@@ -56,7 +56,8 @@ nmap <leader>gc  :Git commit<space>
 nmap <leader>gf  :Git fetch<CR>
 nmap <leader>gP  :Git pull<space>
 nmap <leader>gp  :Git push<space>
-nmap <leader>gm  :Git commit -m ""<left>
+nmap <leader>gM  :Git commit -m ""<left>
+nmap <leader>gm  :Git merge<space>
 nmap <leader>gb  :Git branch<space>
 nmap <leader>gc  :Git checkout<space>
 nmap <leader>gn  :Git checkout -b<space>
@@ -82,6 +83,7 @@ xmap <leader>fl :CocCommand eslint.executeAutofix<CR>
 nmap <leader>fp :CocCommand prettier.formatFile<CR>
 xmap <leader>fp :CocCommand prettier.formatFile<CR>
 xmap <leader>fe :!node ~/.config/nvim/scripts/ru2en.js<CR>
+xmap <leader>fcc :!node ~/.config/nvim/scripts/toCamel.js<CR>
 
 " CTRL MAP
 xmap <C-_> :Commentary<CR>
