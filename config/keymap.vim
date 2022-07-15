@@ -60,6 +60,8 @@ nmap <leader>gm  :Git commit -m ""<left>
 nmap <leader>gb  :Git branch<space>
 nmap <leader>gc  :Git checkout<space>
 nmap <leader>gn  :Git checkout -b<space>
+nmap <leader>gs  :Git status<CR>
+nmap <leader>gr  :Git reset<CR>
 " Searching
 nmap <leader>od <Plug>(coc-definition)
 nmap <leader>ot <Plug>(coc-type-definition)
