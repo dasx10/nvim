@@ -1,6 +1,6 @@
 let mapleader = "\<Space>"
 
-inoremap jk <ESC>
+" inoremap jk <ESC>
 map <C-n> :NERDTreeToggle<CR>
 
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
@@ -53,6 +53,7 @@ nmap <leader>G   :G<CR>
 nmap <leader>gA  :Git add -A<CR>
 nmap <leader>ga  :Git add<space>
 nmap <leader>gc  :Git commit<space>
+nmap <leader>gd  :Git diff<CR>
 nmap <leader>gf  :Git fetch<CR>
 nmap <leader>gP  :Git pull<space>
 nmap <leader>gp  :Git push<space>
@@ -84,28 +85,32 @@ nmap <leader>fp :CocCommand prettier.formatFile<CR>
 xmap <leader>fp :CocCommand prettier.formatFile<CR>
 xmap <leader>fe :!node ~/.config/nvim/scripts/ru2en.js<CR>
 xmap <leader>fcc :!node ~/.config/nvim/scripts/toCamel.js<CR>
+xmap <leader>fm  :!node ~/.config/nvim/scripts/calc.js<CR>
 
 " CTRL MAP
 xmap <C-_> :Commentary<CR>
 nmap <C-_> :Commentary<CR>
-map <C-X>  :q!<CR>
-map <C-x>  :q<CR>
+map <C-q>  :q<CR>
+map <C-Q>  :q!<CR>
 map <C-s>  :w<CR>
 map <C-t>  :tabnew<CR>
-map <C-]>  :tabn<CR>
-map <c-[>  :tabp<cr>
-map <Home> :1<CR>
-map <C-a> 1<v>
 map <C-c> :yank<CR>
 
 " ALT MAP
 nmap <silent> <A-d> <Plug>(coc-range-select)
 xmap <silent> <A-d> <Plug>(coc-range-select)
-nmap <A-up>   : delete<CR>2<up>:put<CR>
-xmap <A-up>   : delete<CR>2<up>:put<CR>
-nmap <A-down> : delete<CR>:put<CR>
-xmap <A-down> : delete<CR>:put<CR>
-nmap <A-j>    : delete<CR>:put<CR>
-xmap <A-j>    : delete<CR>:put<CR>
-nmap <A-k>    : delete<CR>2<up>:put<CR>
-xmap <A-k>    : delete<CR>2<up>:put<CR>
+vnoremap <A-k> :move '<-2<CR>gv=gv
+nnoremap <A-k> :move .-2<CR>==
+vnoremap <A-j> :move '>+1<CR>gv=gv
+nnoremap <A-j> :move .+1<CR>==
+vnoremap <A-up> :move '<-2<CR>gv=gv
+nnoremap <A-up> :move .-2<CR>==
+vnoremap <A-down> :move '>+1<CR>gv=gv
+nnoremap <A-down> :move .+1<CR>==
+nmap <A-g> :move 0<CR>
+xmap <A-g> :move 0<CR>
+nmap <A-n> :move<space>
+xmap <A-n> :move<space>
+
+map <End> :$<CR>
+map <Home> :1<CR>

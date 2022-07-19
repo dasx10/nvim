@@ -1,8 +1,9 @@
 const readline = require('readline');
 const rus = "йцукенгшщзфывапролдячсмить";
-const eng = "qwertyuiopasdfghjklzxcvbnm";
+let eng = "qwertyuiopasdfghjklzxcvbnm";
+eng = eng + eng.toUpperCase();
 const RL  = readline.createInterface(process.stdin, process.stdout);
-const keys = new Map(Array.from(rus, (ruChar, index) => [ruChar, eng[index]]));
+const keys = new Map(Array.from(rus + rus.toUpperCase(), (ruChar, index) => [ruChar, eng[index]]));
 let timer;
 const run = () => {
   RL.question('',x=>{

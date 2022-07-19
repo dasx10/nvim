@@ -14,6 +14,7 @@ set showmatch
 set autoindent
 set filetype
 set linebreak
+set scrolloff       =9
 set colorcolumn     =80
 set background      =dark
 set pumblend        =25
