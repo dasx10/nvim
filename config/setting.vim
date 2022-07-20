@@ -3,7 +3,8 @@ set encoding=UTF-8
 set number
 set relativenumber
 set cursorline
-:highlight Cursorline cterm=bold ctermbg=black
+set cursorcolumn
+set nocompatible
 set ruler
 set guifont=Fira\ Code:h12
 set smarttab
@@ -60,3 +61,8 @@ menu Exit.quit     :quit<CR>
 menu Exit.quit!    :quit!<CR>
 menu Exit.save     :exit<CR>
 map <F10> :emenu Exit.<Tab>
+
+filetype off
+filetype plugin indent on
+syntax on
+:highlight Cursorline cterm=bold ctermbg=black

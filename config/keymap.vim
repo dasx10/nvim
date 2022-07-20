@@ -2,14 +2,15 @@ let mapleader = "\<Space>"
 
 " inoremap jk <ESC>
 map <C-n> :NERDTreeToggle<CR>
+" nmap <silent><leader>t g:NERDTreeToggle()<CR>
 
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
-
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 inoremap <silent><expr> <c-space> coc#refresh()
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-
+nmap <silent> Zq :q<CR>
+nmap <silent> Za :wqa<CR>
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 nmap <F2> <Plug>(coc-rename)
@@ -21,7 +22,7 @@ omap af <Plug>(coc-funcobj-a)
 
 " mouse map
 map <C-LeftMouse>    <Plug>(VM-Mouse-Cursor)
-map <C-RightMouse>   <Plug>(VM-Mouse-Word)
+map <A-RightMouse>   <Plug>(VM-Mouse-Word)
 map <M-C-RightMouse> <Plug>(VM-Mouse-Column)
 
 " LEADER MAP
@@ -73,7 +74,7 @@ nmap <leader>/ :noh<CR>
 nmap <leader>? :Ack<space>
 nmap <leader>co :copen<CR>
 " Formating
-vnoremap cg "hy:%s/<C-r>h//cg<left><left><left>
+vnoremap cg "hy:%s/<C-r>h<BS>//cg<left><left><left>
 nmap <leader>fa <Plug>(EasyAlign)
 xmap <leader>fa <Plug>(EasyAlign)
 xmap <leader>fs :sort<CR>
@@ -90,8 +91,6 @@ xmap <leader>fm  :!node ~/.config/nvim/scripts/calc.js<CR>
 " CTRL MAP
 xmap <C-_> :Commentary<CR>
 nmap <C-_> :Commentary<CR>
-map <C-q>  :q<CR>
-map <C-Q>  :q!<CR>
 map <C-s>  :w<CR>
 map <C-t>  :tabnew<CR>
 map <C-c> :yank<CR>
@@ -107,10 +106,11 @@ vnoremap <A-up> :move '<-2<CR>gv=gv
 nnoremap <A-up> :move .-2<CR>==
 vnoremap <A-down> :move '>+1<CR>gv=gv
 nnoremap <A-down> :move .+1<CR>==
+
 nmap <A-g> :move 0<CR>
 xmap <A-g> :move 0<CR>
 nmap <A-n> :move<space>
 xmap <A-n> :move<space>
 
-map <End> :$<CR>
 map <Home> :1<CR>
+map <End> :$<CR>
