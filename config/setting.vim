@@ -1,22 +1,30 @@
-set mouse=a
 set encoding=UTF-8
+set lazyredraw
 set number
 set relativenumber
 set cursorline
 set cursorcolumn
 set nocompatible
 set ruler
-set guifont=Fira\ Code:h12
 set smarttab
 set cindent
-set hidden " Some servers have issues with backup files, see #649 set nobackup set nowritebackup " Better display for messages set cmdheight=2 " You will have bad experience for diagnostic messages when it's default 4000.
 set expandtab
+set hidden confirm
 set showmatch
 set autoindent
 set filetype
 set linebreak
+
+set stl=[%n]\
+set stl+=%(%{WebDevIconsGetFileTypeSymbol()}\ %r%t%{(&mod?'*':'')}%)
+set stl+=%(\ \☰\ %{FugitiveHead()}%)
+set stl+=%=%{&fenc}\ %l/%L\ %y
+
+set switchbuf       =useopen
+set synmaxcol       =48
+set regexpengine    =1
 set scrolloff       =9
-set colorcolumn     =80
+set colorcolumn     =85
 set background      =dark
 set pumblend        =25
 set winblend        =25
@@ -28,41 +36,16 @@ set inccommand      =split
 set list listchars  =tab:→\ ,eol:↲,nbsp:␣,trail:·,space:·,extends:⟩,precedes:⟨
 set shortmess      +=c
 set signcolumn      =yes
-set updatetime      =300
+set updatetime      =750
 set wildignore      =*/node_modules/*,*/dist/*
-set termguicolors
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 if !has('gui_running')
+  set termguicolors
+  set guifont=Fira\ Code:h12
   set t_Co=256
 endif
-
-"statusline
-set statusline=
-set statusline+=\%*
-set statusline+=%3*\ %F
-set statusline+=%5*
-set statusline+=\ %{CurrentGitBranch()}
-set statusline+=%4*\ %m
-set statusline+=%3*
-set statusline+=%=
-set statusline+=%4*\%{DiagnosticStatus()}
-set statusline+=%6*\%{GitStatus()}
-set statusline+=%3*\ \
-set statusline+=%2*\%l
-set statusline+=%7*\:
-set statusline+=%2*\%L
-set statusline+=%7*\::
-set statusline+=%2*\%c
-set statusline+=%3*\ \%*
-
-set wildmenu
-set wcm=<F12>
-menu Exit.quit     :quit<CR>
-menu Exit.quit!    :quit!<CR>
-menu Exit.save     :exit<CR>
-map <F10> :emenu Exit.<Tab>
 
 filetype off
 filetype plugin indent on
 syntax on
 :highlight Cursorline cterm=bold ctermbg=black
+set mouse=a

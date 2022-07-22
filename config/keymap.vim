@@ -87,6 +87,8 @@ xmap <leader>fp :CocCommand prettier.formatFile<CR>
 xmap <leader>fe :!node ~/.config/nvim/scripts/ru2en.js<CR>
 xmap <leader>fcc :!node ~/.config/nvim/scripts/toCamel.js<CR>
 xmap <leader>fm  :!node ~/.config/nvim/scripts/calc.js<CR>
+nmap <leader>fn :g/^\s*$/d<CR>
+xmap <leader>fn :g/^\s*$/d<CR>
 
 " CTRL MAP
 xmap <C-_> :Commentary<CR>
