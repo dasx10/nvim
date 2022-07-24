@@ -5,4 +5,4 @@ source ~/.config/nvim/config/function.vim
 source ~/.config/nvim/config/keymap.vim
 source ~/.config/nvim/config/command.vim
 source ~/.config/nvim/config/autocmd.vim
-colorscheme vimterial_dark
+colorscheme codedark

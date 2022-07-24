@@ -1,3 +1,11 @@
+function! CharToggle()
+    if (&list == 1)
+        set list!
+    else
+        set list listchars  =tab:→\ ,eol:↲,nbsp:␣,trail:·,space:·,extends:⟩,precedes:⟨
+    endif
+endfunction
+
 function! NumberToggle()
     if (&relativenumber == 1)
         set norelativenumber
